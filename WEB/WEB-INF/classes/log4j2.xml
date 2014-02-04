@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+	<Appenders><!--配置公用配置，在Loggers标签里面配置特定的Logger时候引用-->
+		<Console name="Console" target="SYSTEM_OUT">
+			<ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+		</Console>
+		
+		<File name="log" fileName="target/test.log" append="false">  
+     	 	<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>  
+    	</File>  
+    	
+    	<RollingFile name="RollingFile" fileName="logs/LHW.log" filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">  
+      		<PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} %L %M - %msg%xEx%n"/>  
+      		<SizeBasedTriggeringPolicy size="50 MB" />  
+    	</RollingFile>  	
+    </Appenders>
+    
+    
+    <Loggers>
+    
+    	<!--这是默认的处理级别-->
+		<Root level="all">
+			<AppenderRef ref="Console"/>
+		</Root>
+		
+		<!--只对这个类起效果-->
+		<logger name="test.Bar" level="trace" additivity="false">  
+      		<appender-ref ref="RollingFile"/>  
+    	</logger>
+
+    
+    </Loggers>
+    
+</Configuration>

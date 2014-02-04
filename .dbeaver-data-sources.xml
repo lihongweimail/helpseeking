@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mysql5-1388895115669-1377280663" provider="mysql" driver="mysql5" name="MySQL - stackoverflow" create-date="1388895115670" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="10.131.252.224" port="3309" server="" database="stackoverflow" url="jdbc:mysql://10.131.252.224:3309/stackoverflow" user="root" password="AQsJNCGi" home="C:\Program Files\MySQL\MySQL Server 5.6" type="dev"/>
+	</data-source>
+</data-sources>
