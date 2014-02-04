@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+         <perspective
+         class="cn.edu.fudan.se.helpseeking.perspective.HelpSeekingPerspective"
+         id="HelpSeekingPerspective"
+         name="HelpSeekingPerspective"
+         ></perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+      	id="HelpSeekingCategoryView"
+      	name="HelpSeekingCategoryView">
+      	</category>
+      <view
+            category="HelpSeekingCategoryView"
+            class="cn.edu.fudan.se.helpseeking.views.HelpSeekingSolutionView"
+            id="HelpSeekingSolutionView"
+            name="HelpSeekingSolutionView"
+            restorable="true">
+      </view>
+      <view
+            category="HelpSeekingCategoryView"
+            class="cn.edu.fudan.se.helpseeking.views.HelpSeekingSearchView"
+            id="HelpSeekingSearchView"
+            name="HelpSeekingSearchView"
+            restorable="true">
+      </view>
+      <view
+            category="HelpSeekingCategoryView"
+            class="cn.edu.fudan.se.helpseeking.views.HelpSeekingCommentsView"
+            id="HelpSeekingCommentsView"
+            name="HelpSeekingCommentsView"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>
