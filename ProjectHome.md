@@ -1,0 +1,1 @@
+an error occurs when developer compile or run an application , she need seeking on internet for help. this project will auto providing some recommended solution for the error to her.
